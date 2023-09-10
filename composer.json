@@ -1,0 +1,55 @@
+{
+    "name": "geoffselby/laravel-dom-crawler",
+    "description": "A Laravel adapter for Symfony's DOM Crawler package",
+    "keywords": [
+        "geoffselby",
+        "laravel-dom-crawler"
+    ],
+    "homepage": "https://github.com/geoffselby/laravel-dom-crawler",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Geoff Selby",
+            "email": "geoff@geoffselby.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0",
+        "symfony/dom-crawler": "^6.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelDomCrawler\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelDomCrawler\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelDomCrawler\\Providers\\LaravelDomCrawlerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelDomCrawler": "LaravelDomCrawler\\Facades\\Crawler"
+            }
+        }
+    }
+}

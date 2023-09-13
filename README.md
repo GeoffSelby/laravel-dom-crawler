@@ -1,3 +1,5 @@
+> This project is currently under development. It is not ready for use in any setting. Check back later.
+
 # DOM Crawler for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/geoffselby/laravel-dom-crawler.svg?style=flat-square)](https://packagist.org/packages/geoffselby/laravel-dom-crawler)
@@ -18,6 +20,12 @@ composer require geoffselby/laravel-dom-crawler
 
 ```php
 use LaravelDomCrawler\Facades\Crawler;
+
+//...
+
+$crawler = Crawler::crawl($content)
+    ->filter('a')
+    ->reduce()
 ```
 
 ### Testing
